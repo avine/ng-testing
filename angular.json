@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/demo",
       "sourceRoot": "apps/demo/src",
-      "prefix": "ng-testing",
+      "prefix": "demo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

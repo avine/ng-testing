@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "ng-testing",
+            "prefix": "demo",
             "style": "kebab-case"
           }
         ]
