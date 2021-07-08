@@ -18,11 +18,11 @@ describe('HomeComponent', () => {
   });
 
   it('should increment', async () => {
-    expect((spectator.query('p') as HTMLElement).textContent).toMatch('0');
+    expect(spectator.query<HTMLElement>('p')?.textContent).toMatch('0');
 
     spectator.component.count = 1;
     spectator.detectComponentChanges();
 
-    expect((spectator.query('p') as HTMLElement).textContent).toMatch('1');
+    expect(spectator.query<HTMLElement>('p')?.textContent).toMatch('1');
   });
 });
