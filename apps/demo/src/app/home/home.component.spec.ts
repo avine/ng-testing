@@ -17,10 +17,21 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should NOT increment', async () => {
+    fixture.detectChanges();
+
+    expect((fixture.nativeElement as HTMLElement).querySelector('p')?.textContent).toMatch('0');
+
+    component.count = 1;
+    fixture.detectChanges();
+
+    expect((fixture.nativeElement as HTMLElement).querySelector('p')?.textContent).not.toMatch('1');
   });
 });
